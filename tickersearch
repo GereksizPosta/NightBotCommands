@@ -1,4 +1,4 @@
-$(eval var text=""; var i=0; list=$(urlfetch json https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=$(query)&apikey=PN1XQB7CY0KNCLJ4); 
+$(eval var text=""; var i=0; list=$(urlfetch json https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=$(query)&apikey=CHANGETHIS); 
 for (i=0; i<4; i++) {
   text += list.bestMatches[i]["1. symbol"] + " - " + list.bestMatches[i]["2. name"] + " |**| ";
   }
