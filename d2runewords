@@ -1,0 +1,15 @@
+$(eval rw=""; var text, 
+list=$(urlfetch json https://pastebin.com/raw/vhMFnhK2); 
+rw='$(query)'.toLowerCase(); 
+function test(val) {  
+for (i in list.runewords) { 
+  if(list.runewords[i].name == val) { 
+    text = list.runewords[i].name + " = " + list.runewords[i].runes + " (" + list.runewords[i].items + ")" + ": " + list.runewords[i].link;
+    }
+ } 
+ if (text != void(0)) { 
+  return text;
+  } else { 
+  return "couldn't find " + val;}
+  }
+test(rw);)
